@@ -3,6 +3,7 @@ from datetime import date
 import time
 from animation import animationList
 
+
 def main():
 	try:
 		day, month, year = getInput()
@@ -19,15 +20,17 @@ def main():
 	except Exception as e:
 		print(e)
 
+
 def printFrame(i):
-	animationList
 	frame = "\n".join(animationList[i])
 	print(frame)
+
 
 def formatAnimations():
 	for f in animationList:
 		for i, line in enumerate(f):
 			f[i] = "\u001B[32m" + line + "\u001B[0m"
+
 
 def getInput():
 	currentDate = date.today()
@@ -49,9 +52,11 @@ def getInput():
 
 	return d, m, y
 
+
 def printTitle(year):
 	numberOfDays = 90 + (-2020 + year)
 	print(f"{numberOfDays}" + r" اليوم الوطني السعودي")
+
 
 if __name__ == "__main__":
 	main()
